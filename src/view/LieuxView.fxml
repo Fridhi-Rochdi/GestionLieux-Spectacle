@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/21.0.5"
+            fx:controller="controller.LieuxController"
+            style="-fx-background-color: #ecf0f1;">
+    <VBox spacing="15" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10" 
+          style="-fx-padding: 20; -fx-background-radius: 10; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 5);">
+        <!-- Page Title -->
+        <Label text="Gestion des Lieux" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <!-- Search Section -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="searchField" promptText="Rechercher un lieu..." 
+                       style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+            <Button fx:id="searchButton" text="Rechercher" 
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #2980b9; -fx-background-radius: 5; -fx-padding: 10;"/>
+        </HBox>
+
+        <!-- Table Section -->
+        <ScrollPane fitToWidth="true" fitToHeight="true" 
+                    style="-fx-padding: 10; -fx-background-color: transparent;">
+            <TableView fx:id="lieuxTable" prefHeight="400" 
+                       style="-fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+                <columns>
+                    <TableColumn text="Nom" fx:id="nameColumn" prefWidth="150"/>
+                    <TableColumn text="Capacité" fx:id="capacityColumn" prefWidth="200"/>
+                    <TableColumn text="Adresse" fx:id="addressColumn" prefWidth="150"/>
+                    <TableColumn text="Ville" fx:id="cityColumn" prefWidth="120"/>
+                </columns>
+                <placeholder>
+                    <Label text="Il n'existe pas des lieux" 
+                           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+                </placeholder>
+            </TableView>
+        </ScrollPane>
+
+        <!-- Action Buttons -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Button text="Ajouter" onAction="#handleAddLieu" 
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #27ae60; -fx-background-radius: 5; -fx-padding: 10;"/>
+            <Button text="Modifier" onAction="#handleEditLieu" 
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #f39c12; -fx-background-radius: 5; -fx-padding: 10;"/>
+            <Button text="Supprimer" onAction="#handleDeleteLieu" 
+                    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #e74c3c; -fx-background-radius: 5; -fx-padding: 10;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/21.0.5"
+            fx:controller="controller.LieuxPopupController"
+            style="-fx-background-color: #ecf0f1;">
+    <children>
+        <VBox spacing="20" alignment="CENTER" prefWidth="600" prefHeight="500" 
+              AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" 
+              AnchorPane.bottomAnchor="20" style="-fx-padding: 30; -fx-background-radius: 10; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 5);">
+            <!-- Page Title -->
+            <Label text="Ajouter un lieu" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+            <!-- Form Section -->
+            <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Nom:" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+                    <TextField fx:id="nameField" promptText="Entrez le nom du lieu" 
+                               style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Capacité:" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+                    <TextField fx:id="capacityField" promptText="Entrez la capacité" 
+                               style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Adresse:" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+                    <TextField fx:id="addressField" promptText="Entrez l'adresse" 
+                               style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Ville:" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+                    <TextField fx:id="cityField" promptText="Entrez la ville" 
+                               style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+                </VBox>
+            </VBox>
+
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;">
+                <Button text="Ajouter" fx:id="addButton" 
+                        style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: #27ae60; -fx-background-radius: 5; -fx-padding: 10;"/>
+                <Button text="Annuler" fx:id="cancelButton" 
+                        style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: #c0392b; -fx-background-radius: 5; -fx-padding: 10;"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
